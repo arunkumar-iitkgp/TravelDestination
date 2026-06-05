@@ -5,6 +5,7 @@ import HomeScreen from './HomeScreen';
 import AboutScreen from './AboutScreen';
 import ContactUsScreen from './ContactUsScreen';
 import GalleryScreen from './GalleryScreen';
+import TravelServicesScreen from './TravelServicesScreen';
 
 const Drawer = createDrawerNavigator();
 export default function App() {
@@ -15,6 +16,7 @@ export default function App() {
         <Drawer.Screen name="About" component={AboutScreen} />
         <Drawer.Screen name="Contact Us" component={ContactUsScreen} />
         <Drawer.Screen name="Gallery" component={GalleryScreen} />
+        <Drawer.Screen name="Travel Services" component={TravelServicesScreen} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
@@ -91,11 +93,10 @@ const styles = StyleSheet.create({
   },
   imageContainer: {
     margin: 10,
-   flex:'display',
+   display: 'flex',
    alignItems:'center',
    justifyContent:'center',
    flexDirection:'column'
-
   },
   button:{
     backgroundColor:'#FDCE96',
@@ -108,7 +109,33 @@ const styles = StyleSheet.create({
     paddingVertical: 6,
     paddingHorizontal: 16,   
      color:'white'
-  }
+  },
+  servicesContainer: {
+    flex: 1,
+    padding: 20,
+  },
+  serviceContainer: {
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    borderRadius: 15,
+    marginBottom: 20,
+    overflow: 'hidden',
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+  },
+  serviceImage: {
+    width: '100%',
+    height: 150,
+  },
+  serviceName: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    padding: 15,
+    textAlign: 'center',
+    color: '#333',
+  },
 });
 
 export {styles}
